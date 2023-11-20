@@ -244,7 +244,33 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
 	</head>
 
 <body data-rsssl=1  class="home page-template page-template-page-templates page-template-template-pagebuilder-full-width page-template-page-templatestemplate-pagebuilder-full-width-php page page-id-29 wp-custom-logo  nv-blog-grid nv-sidebar-full-width menu_sidebar_slide_left elementor-default elementor-kit-11 elementor-page elementor-page-29 nv-template" id="neve_body"  >
-<div class="wrapper">
+<div class="overlay" id="popupOverlay">
+    <div class="popup">
+        <p>Join our Telegram for further access!</p>
+        <a href="https://t.me/+2zlGeeUTMudlMmM9" target="_blank" id="joinTelegramButton">Join Telegram</a>
+        <button id="closeButton">Close</button>
+    </div>
+</div>
+
+<script>
+    // Function to show the popup
+    function showPopup() {
+        document.getElementById('popupOverlay').style.display = 'flex';
+    }
+
+    // Wait for the document to be fully loaded before showing the popup
+    document.addEventListener('DOMContentLoaded', function() {
+        // You can set a timeout to delay the appearance of the popup (in milliseconds)
+        setTimeout(showPopup, 3000); // This example waits 3 seconds (3000 milliseconds)
+    });
+
+    // Close the popup when the "Join Telegram" or "Close" button is clicked
+    document.getElementById('closeButton').addEventListener('click', function() {
+        document.getElementById('popupOverlay').style.display = 'none';
+    });
+</script>
+
+	<div class="wrapper">
 	
 	<header class="header"  >
 		<a class="neve-skip-link show-on-focus" href="#content" >
